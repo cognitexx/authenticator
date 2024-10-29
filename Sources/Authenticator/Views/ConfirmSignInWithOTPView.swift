@@ -15,7 +15,7 @@ public struct ConfirmSignInWithOTPView<Header: View,
     @ObservedObject private var state: ConfirmSignInWithCodeState
     private let content: ConfirmSignInWithCodeView<Header, Footer>
 
-    /// Creates a `ConfirmSignInWithMFACodeView`
+    /// Creates a `ConfirmSignInWithOTPView`
     /// - Parameter state: The ``ConfirmSignInWithCodeState`` that is observed by this view
     /// - Parameter headerContent: The content displayed above the fields. Defaults to  ``ConfirmSignInWithMFACodeHeader``
     /// - Parameter footerContent: The content displayed bellow the fields. Defaults to  ``ConfirmSignInWithMFACodeFooter``
