@@ -18,7 +18,7 @@ public struct ConfirmSignInWithOTPView<Header: View,
     /// Creates a `ConfirmSignInWithOTPView`
     /// - Parameter state: The ``ConfirmSignInWithCodeState`` that is observed by this view
     /// - Parameter headerContent: The content displayed above the fields. Defaults to  ``ConfirmSignInWithOTPHeader``
-    /// - Parameter footerContent: The content displayed bellow the fields. Defaults to  ``ConfirmSignInWithMFACodeFooter``
+    /// - Parameter footerContent: The content displayed bellow the fields. Defaults to  ``ConfirmSignInWithOTPFooter``
     public init(
         state: ConfirmSignInWithCodeState,
         @ViewBuilder headerContent: () -> Header = {
