@@ -72,7 +72,7 @@ struct ConfirmSignInWithCodeView<Header: View,
     }
 
     private var submitButtonTitle: String {
-        switch getCurrentMFAType {
+        switch currentMFAType {
         case .sms, .none, .email:
             return "authenticator.confirmSignInWithCode.button.submit".localized()
         case .totp:
