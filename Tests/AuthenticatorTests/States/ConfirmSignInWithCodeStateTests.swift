@@ -99,7 +99,7 @@ class ConfirmSignInWithCodeStateTests: XCTestCase {
         XCTAssertEqual(deliveryDetails.destination, destination)
     }
 
-    func testDeliveryDetails_onConfirmSignInWithEmailMFACodeStep_shouldReturnDetails() throws {
+    func testDeliveryDetails_onConfirmSignInWithOTPCodeStep_shouldReturnDetails() throws {
         let destination = DeliveryDestination.email("test@test.com")
         authenticatorState.mockedStep = .confirmSignInWithOTP(deliveryDetails: .init(destination: destination))
 
