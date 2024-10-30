@@ -17,4 +17,13 @@ final class ResetPasswordViewTests: AuthenticatorBaseTestCase {
         ])
         assertSnapshot()
     }
+
+    func testConfirmSignInWithResetPassword() throws {
+        launchAppAndLogin(with: [
+            .hidesSignUpButton(false),
+            .initialStep(.signIn),
+            .authSignInStep(.resetPassword)
+        ])
+        assertSnapshot()
+    }
 }
