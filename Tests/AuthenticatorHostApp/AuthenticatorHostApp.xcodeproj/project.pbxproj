@@ -30,6 +30,7 @@
 		48DED8F12AC2011100F44908 /* ContinueSignInWithMFASelectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DED8F02AC2011100F44908 /* ContinueSignInWithMFASelectionViewTests.swift */; };
 		48DED8F32AC201E600F44908 /* ContinueSignInWithTOTPSetupViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DED8F22AC201E600F44908 /* ContinueSignInWithTOTPSetupViewTests.swift */; };
 		48DED8F52AC2050800F44908 /* Snapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DED8F42AC2050800F44908 /* Snapshotter.swift */; };
+		48E30F362CD2A0C6008A38C1 /* ConfirmSignInWithOTPCodeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486937642CD29950006D94CC /* ConfirmSignInWithOTPCodeViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +317,7 @@
 				48DED8F12AC2011100F44908 /* ContinueSignInWithMFASelectionViewTests.swift in Sources */,
 				486937632CD2994E006D94CC /* ContinueSignInWithEmailMFASetupViewTests.swift in Sources */,
 				482D011D2AC1E839000A3140 /* SignUpViewTests.swift in Sources */,
+				48E30F362CD2A0C6008A38C1 /* ConfirmSignInWithOTPCodeViewTests.swift in Sources */,
 				482D011F2AC1E85C000A3140 /* ResetPasswordViewTests.swift in Sources */,
 				482D01242AC1F00D000A3140 /* ConfirmSignInWithTOTPCodeViewTests.swift in Sources */,
 				48DED8F32AC201E600F44908 /* ContinueSignInWithTOTPSetupViewTests.swift in Sources */,
