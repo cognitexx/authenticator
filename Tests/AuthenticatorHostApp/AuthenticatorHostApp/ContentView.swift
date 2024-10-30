@@ -17,6 +17,8 @@ enum SignInNextStepForTesting: String, CaseIterable, Identifiable {
     case continueSignInWithMFASetupSelection = "Continue with MFA Setup Selection"
     case confirmSignInWithEmailMFACode = "Confirm with Email MFA Code"
     case confirmSignInWithPhoneMFACode = "Confirm with Phone MFA Code"
+    case confirmSignInWithTOTP = "Confirm with TOTP"
+    case customAuth = "Confirm sign in with Custom Auth"
 
     var id: String { self.rawValue }
 
@@ -34,6 +36,10 @@ enum SignInNextStepForTesting: String, CaseIterable, Identifiable {
             return .confirmSignInWithOTP(.init(destination: .email("h***@a***.com")))
         case .confirmSignInWithPhoneMFACode:
             return .confirmSignInWithOTP(.init(destination: .phone("+11***")))
+        case .confirmSignInWithTOTP:
+            return .confirmSignInWithTOTPCode
+        case .customAuth:
+            return .confirmSignInWithCustomChallenge(nil)
         }
     }
 }

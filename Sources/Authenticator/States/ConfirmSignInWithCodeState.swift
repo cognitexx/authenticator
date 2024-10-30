@@ -23,13 +23,15 @@ public class ConfirmSignInWithCodeState: AuthenticatorBaseState {
                    credentials: Credentials())
     }
 
-    /// The `Amplify.AuthCodeDeliveryDetails` associated with this state. If the Authenticator is not in the `.confirmSignInWithMFACode` step, it returns `nil`
+    /// The `Amplify.AuthCodeDeliveryDetails` associated with this state. If the Authenticator is not in the `.confirmSignInWithMFACode` or `confirmSignInWithOTP` step, it returns `nil`
     public var deliveryDetails: AuthCodeDeliveryDetails? {
-        guard case .confirmSignInWithMFACode(let deliveryDetails) = authenticatorState.step else {
+        switch authenticatorState.step {
+        case .confirmSignInWithMFACode(let deliveryDetails),
+                .confirmSignInWithOTP(let deliveryDetails):
+            return deliveryDetails
+        default:
             return nil
         }
-
-        return deliveryDetails
     }
 
     /// Attempts to confirm the user's sign in using the provided confirmation code.

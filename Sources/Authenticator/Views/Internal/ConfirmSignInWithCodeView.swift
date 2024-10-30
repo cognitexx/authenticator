@@ -55,10 +55,8 @@ struct ConfirmSignInWithCodeView<Header: View,
 
     private var textFieldLabel: String {
         switch getCurrentMFAType {
-        case .sms, .none:
-            return "authenticator.confirmSignInWithCode.field.phone.code.label".localized()
-        case .email:
-            return "authenticator.confirmSignInWithCode.field.email.code.label".localized()
+        case .sms, .none, .email:
+            return "authenticator.field.code.label".localized()
         case .totp:
             return "authenticator.field.totp.code.label".localized()
         }

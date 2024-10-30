@@ -7,7 +7,7 @@
       "location" : "https://github.com/aws-amplify/amplify-swift",
       "state" : {
         "branch" : "feat/email-mfa-support-public",
-        "revision" : "f332d126512fd9e28cbe07f4b3fdb36ab9cff4cb"
+        "revision" : "a1432446796b621e1a624ffe58d39150ea705b31"
       }
     },
     {
