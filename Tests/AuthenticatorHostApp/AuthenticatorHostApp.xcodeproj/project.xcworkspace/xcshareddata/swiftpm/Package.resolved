@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/aws-amplify/amplify-swift",
       "state" : {
-        "branch" : "feat/email-mfa-support-public",
-        "revision" : "a1432446796b621e1a624ffe58d39150ea705b31"
+        "revision" : "6ea7a04b2824e716712381703407c7e00a48a96b",
+        "version" : "2.43.0"
       }
     },
     {
