@@ -34,7 +34,7 @@ struct ConfirmSignInWithCodeView<Header: View,
         ))
     }
 
-    private var getCurrentMFAType: AuthenticatorFactorType  {
+    private var currentMFAType: AuthenticatorFactorType  {
         switch authenticatorState.step {
         case .confirmSignInWithMFACode(let deliveryDetails),
         .confirmSignInWithOTP(let deliveryDetails):
