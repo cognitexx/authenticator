@@ -22,6 +22,8 @@
 		483E09512ABBC17A00EFD1D7 /* Authenticator in Frameworks */ = {isa = PBXBuildFile; productRef = 483E09502ABBC17A00EFD1D7 /* Authenticator */; };
 		483E09542ABBC26C00EFD1D7 /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E09532ABBC26C00EFD1D7 /* MockAuthenticationService.swift */; };
 		483E09572ABBC2C100EFD1D7 /* AuthCategoryConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E09562ABBC2C100EFD1D7 /* AuthCategoryConfigurationFactory.swift */; };
+		486937612CD2994B006D94CC /* ContinueSignInWithMFASetupSelectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486937602CD29949006D94CC /* ContinueSignInWithMFASetupSelectionViewTests.swift */; };
+		486937632CD2994E006D94CC /* ContinueSignInWithEmailMFASetupViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486937622CD2994D006D94CC /* ContinueSignInWithEmailMFASetupViewTests.swift */; };
 		4873E7532ABC99E4001EDA1D /* ImageDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4873E7522ABC99E4001EDA1D /* ImageDiff.swift */; };
 		4873E7572ABC9B51001EDA1D /* CleanCounterBetweenTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4873E7562ABC9B51001EDA1D /* CleanCounterBetweenTestCases.swift */; };
 		4873E7592ABC9C58001EDA1D /* AuthenticatorBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4873E7582ABC9C58001EDA1D /* AuthenticatorBaseTestCase.swift */; };
@@ -56,6 +58,9 @@
 		483E09532ABBC26C00EFD1D7 /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 		483E09562ABBC2C100EFD1D7 /* AuthCategoryConfigurationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCategoryConfigurationFactory.swift; sourceTree = "<group>"; };
 		483E095C2ABBC4AC00EFD1D7 /* AuthenticatorHostAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticatorHostAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		486937602CD29949006D94CC /* ContinueSignInWithMFASetupSelectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueSignInWithMFASetupSelectionViewTests.swift; sourceTree = "<group>"; };
+		486937622CD2994D006D94CC /* ContinueSignInWithEmailMFASetupViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueSignInWithEmailMFASetupViewTests.swift; sourceTree = "<group>"; };
+		486937642CD29950006D94CC /* ConfirmSignInWithOTPCodeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSignInWithOTPCodeViewTests.swift; sourceTree = "<group>"; };
 		4873E7522ABC99E4001EDA1D /* ImageDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDiff.swift; sourceTree = "<group>"; };
 		4873E7562ABC9B51001EDA1D /* CleanCounterBetweenTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanCounterBetweenTestCases.swift; sourceTree = "<group>"; };
 		4873E7582ABC9C58001EDA1D /* AuthenticatorBaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorBaseTestCase.swift; sourceTree = "<group>"; };
@@ -88,6 +93,9 @@
 		482D01202AC1E939000A3140 /* TestCases */ = {
 			isa = PBXGroup;
 			children = (
+				486937642CD29950006D94CC /* ConfirmSignInWithOTPCodeViewTests.swift */,
+				486937622CD2994D006D94CC /* ContinueSignInWithEmailMFASetupViewTests.swift */,
+				486937602CD29949006D94CC /* ContinueSignInWithMFASetupSelectionViewTests.swift */,
 				482D011A2AC1E824000A3140 /* SignInViewTests.swift */,
 				482D011C2AC1E839000A3140 /* SignUpViewTests.swift */,
 				482D011E2AC1E85C000A3140 /* ResetPasswordViewTests.swift */,
@@ -304,7 +312,9 @@
 				48DED8F52AC2050800F44908 /* Snapshotter.swift in Sources */,
 				482D01142ABE21F7000A3140 /* AuthenticatorUITestUtils.swift in Sources */,
 				4873E7532ABC99E4001EDA1D /* ImageDiff.swift in Sources */,
+				486937612CD2994B006D94CC /* ContinueSignInWithMFASetupSelectionViewTests.swift in Sources */,
 				48DED8F12AC2011100F44908 /* ContinueSignInWithMFASelectionViewTests.swift in Sources */,
+				486937632CD2994E006D94CC /* ContinueSignInWithEmailMFASetupViewTests.swift in Sources */,
 				482D011D2AC1E839000A3140 /* SignUpViewTests.swift in Sources */,
 				482D011F2AC1E85C000A3140 /* ResetPasswordViewTests.swift in Sources */,
 				482D01242AC1F00D000A3140 /* ConfirmSignInWithTOTPCodeViewTests.swift in Sources */,

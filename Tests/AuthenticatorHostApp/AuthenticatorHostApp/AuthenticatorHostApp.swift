@@ -72,7 +72,7 @@ struct AuthenticatorHostApp: App {
     private func getMockedNextStepResult(from authUITestSignInStep: AuthUITestSignInStep) -> AuthSignInStep {
         switch authUITestSignInStep {
         case .confirmSignInWithSMSMFACode:
-            return .confirmSignInWithSMSMFACode(.init(destination: .email("testEmail@test.com")), nil)
+            return .confirmSignInWithSMSMFACode(.init(destination: .email("111-222-3333")), nil)
         case .confirmSignInWithCustomChallenge:
             return .confirmSignInWithCustomChallenge(nil)
         case .confirmSignInWithNewPassword:
@@ -82,7 +82,13 @@ struct AuthenticatorHostApp: App {
         case .continueSignInWithTOTPSetup:
             return .continueSignInWithTOTPSetup(.init(sharedSecret: "secret", username: "username"))
         case .continueSignInWithMFASelection:
-            return .continueSignInWithMFASelection([.totp, .sms])
+            return .continueSignInWithMFASelection([.totp, .sms, .email])
+        case .continueSignInWithMFASetupSelection:
+            return .continueSignInWithMFASetupSelection([.totp, .email])
+        case .continueSignInWithEmailMFASetup:
+            return .continueSignInWithEmailMFASetup
+        case .confirmSignInWithEmailMFACode:
+            return .confirmSignInWithOTP(.init(destination: .email("test@amazon.com")))
         case .resetPassword:
             return .resetPassword(nil)
         case .confirmSignUp:
