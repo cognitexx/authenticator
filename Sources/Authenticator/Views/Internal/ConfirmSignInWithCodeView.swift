@@ -63,7 +63,7 @@ struct ConfirmSignInWithCodeView<Header: View,
     }
 
     private var textFieldPlaceholder: String {
-        switch getCurrentMFAType {
+        switch currentMFAType {
         case .sms, .none, .email:
             return "authenticator.field.code.placeholder".localized()
         case .totp:
