@@ -49,3 +49,4 @@ amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
+Tests/AuthenticatorHostApp/AuthenticatorHostApp.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
