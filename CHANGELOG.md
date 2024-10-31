@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.8 (2024-10-31)
+
+### Feature
+- **Authenticator**: Adding support for Email MFA (#96)
+
 ## 1.1.8 (2024-09-20)
 
 ### Bug Fixes
