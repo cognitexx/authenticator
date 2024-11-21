@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1 (2024-11-21)
+
+### Misc. Updates
+- Pinning the Amplify version up to 2.44.x
+
 ## 1.2.0 (2024-10-31)
 
 ### Feature
