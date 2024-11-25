@@ -147,6 +147,8 @@ public class AuthenticatorBaseState: ObservableObject {
                 credentials.message = self.error(for: error)
                 return .signIn
             }
+        default:
+            throw AuthError.unknown("Unsupported next step: \(result.nextStep)", nil)
         }
     }
     

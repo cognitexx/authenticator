@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.2 (2024-11-26)
+
+### Misc. Updates
+- Updating code to support Amplify 2.45+
+
 ## 1.2.1 (2024-11-21)
 
 ### Misc. Updates

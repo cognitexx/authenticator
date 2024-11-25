@@ -35,6 +35,10 @@ class MockAuthenticationService: AuthenticationService {
         throw AuthenticatorError.error(message: "Unable to confirm sign in")
     }
 
+    func autoSignIn() async throws -> AuthSignInResult {
+        fatalError("Unsupported operation in Authenticator")
+    }
+
     var mockedCurrentUser: AuthUser?
     func getCurrentUser() async throws -> AuthUser {
         if let mockedCurrentUser = mockedCurrentUser {
@@ -74,7 +78,7 @@ class MockAuthenticationService: AuthenticationService {
     func signUp(username: String, password: String?, options: AuthSignUpRequest.Options?) async throws -> AuthSignUpResult {
         signUpCount += 1
         signUpParams = (username, password)
-        
+
         if let mockedSignUpResult = mockedSignUpResult {
             return mockedSignUpResult
         }
@@ -188,14 +192,28 @@ class MockAuthenticationService: AuthenticationService {
     func forgetDevice(_ device: AuthDevice?, options: AuthForgetDeviceRequest.Options?) async throws {}
 
     func rememberDevice(options: AuthRememberDeviceRequest.Options?) async throws {}
-    
+
     // MARK: - TOTP
-    
+
     func setUpTOTP() async throws -> TOTPSetupDetails {
         return .init(sharedSecret: "", username: "")
     }
-    
+
     func verifyTOTPSetup(code: String, options: VerifyTOTPSetupRequest.Options?) async throws {}
+
+    // MARK: - WebAuthn
+
+    func associateWebAuthnCredential(presentationAnchor: AuthUIPresentationAnchor?, options: AuthAssociateWebAuthnCredentialRequest.Options?) async throws {
+        fatalError("Unsupported operation in Authenticator")
+    }
+
+    func listWebAuthnCredentials(options: AuthListWebAuthnCredentialsRequest.Options?) async throws -> AuthListWebAuthnCredentialsResult {
+        fatalError("Unsupported operation in Authenticator")
+    }
+
+    func deleteWebAuthnCredential(credentialId: String, options: AuthDeleteWebAuthnCredentialRequest.Options?) async throws {
+        fatalError("Unsupported operation in Authenticator")
+    }
 }
 
 extension MockAuthenticationService {
