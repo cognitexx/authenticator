@@ -69,7 +69,7 @@ struct PhoneNumberField: View {
                     .frame(width: 1)
                     .overlay(theme.colors.border.primary)
 
-                SwiftUI.TextField(placeholder, text: $phoneNumber)
+                SwiftUI.TextField("", text: $phoneNumber, prompt: createPlaceHolderView(label: placeholder))
                     .disableAutocorrection(true)
                     .focused($focusedField, equals: .phoneNumber)
                     .onChange(of: phoneNumber) { newValue in
@@ -100,6 +100,7 @@ struct PhoneNumberField: View {
                         "authenticator.field.phoneNumber.label".localized()
                     ))
                     .textFieldStyle(.plain)
+                    .foregroundColor(foregroundColor)
                     .frame(height: Platform.isMacOS ? 20 : 25)
                     .padding([.top, .bottom, .leading], theme.components.field.padding)
                 #if os(iOS)
@@ -122,6 +123,14 @@ struct PhoneNumberField: View {
                 }
             }
         }
+    }
+
+    private func createPlaceHolderView(label: String) -> SwiftUI.Text {
+        let textView = SwiftUI.Text(label)
+            .foregroundColor(theme.colors.foreground.disabled.opacity(0.6))
+            .font(theme.fonts.body)
+        textView.accessibilityHidden(true)
+        return textView
     }
 
     private var foregroundColor: Color {

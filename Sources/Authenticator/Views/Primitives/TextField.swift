@@ -51,7 +51,7 @@ struct TextField: View {
             isFocused: isFocused
         ) {
             HStack {
-                SwiftUI.TextField(placeholder, text: $text)
+                SwiftUI.TextField("", text: $text, prompt: createPlaceHolderView(label: placeholder))
                     .disableAutocorrection(true)
                     .focused($isFocused)
                     .onChange(of: text) { text in
@@ -65,6 +65,7 @@ struct TextField: View {
                         }
                     }
                     .textFieldStyle(.plain)
+                    .foregroundColor(foregroundColor)
                     .frame(height: Platform.isMacOS ? 20 : 25)
                     .padding([.top, .bottom, .leading], theme.components.field.padding)
                 #if os(iOS)
@@ -79,6 +80,23 @@ struct TextField: View {
                     .padding([.top, .bottom, .trailing], theme.components.field.padding)
                 }
             }
+        }
+    }
+
+    private func createPlaceHolderView(label: String) -> SwiftUI.Text {
+        let textView = SwiftUI.Text(label)
+            .foregroundColor(theme.colors.foreground.disabled.opacity(0.6))
+            .font(theme.fonts.body)
+        textView.accessibilityHidden(true)
+        return textView
+    }
+
+    private var foregroundColor: Color {
+        switch validator.state {
+        case .normal:
+            return theme.colors.foreground.secondary
+        case .error:
+            return theme.colors.foreground.error
         }
     }
 
