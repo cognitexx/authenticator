@@ -116,7 +116,6 @@ struct PasswordField: View {
         }
     }
 
-
     private var showPasswordButtonColor: Color {
         switch validator.state {
         case .normal:
