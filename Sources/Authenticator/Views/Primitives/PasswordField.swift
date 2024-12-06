@@ -65,6 +65,7 @@ struct PasswordField: View {
                         }
                     }
                     .textFieldStyle(.plain)
+                    .foregroundColor(foregroundColor)
                     .frame(height: Platform.isMacOS ? 20 : 25)
                     .padding([.top, .bottom, .leading], theme.components.field.padding)
                 #if os(iOS)
@@ -86,16 +87,33 @@ struct PasswordField: View {
 
     @ViewBuilder private func createInput() -> some View {
         if isShowingPassword {
-            SwiftUI.TextField(placeholder, text: $text)
+            SwiftUI.TextField("", text: $text, prompt: createPlaceHolderView(label: placeholder))
                 .focused($focusedField, equals: .plain)
         } else {
-            SwiftUI.SecureField(placeholder, text: $text)
+            SwiftUI.SecureField("", text: $text, prompt: createPlaceHolderView(label: placeholder))
                 .focused($focusedField, equals: .secure)
         }
     }
 
     private var isFocused: Bool {
         return focusedField != nil
+    }
+
+    private func createPlaceHolderView(label: String) -> SwiftUI.Text {
+        let textView = SwiftUI.Text(label)
+            .foregroundColor(theme.colors.foreground.disabled.opacity(0.6))
+            .font(theme.fonts.body)
+        textView.accessibilityHidden(true)
+        return textView
+    }
+
+    private var foregroundColor: Color {
+        switch validator.state {
+        case .normal:
+            return theme.colors.foreground.secondary
+        case .error:
+            return theme.colors.foreground.error
+        }
     }
 
     private var showPasswordButtonColor: Color {
